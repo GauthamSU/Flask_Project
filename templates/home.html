@@ -10,18 +10,26 @@
         height: 360px;
         width: 100%;
         object-fit:cover;
+        margin-bottom:16px;
       }
     </style>
   </head>
   <body>
+    {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src='https://flaskproject--gauthamsu.repl.co/static/banner.jpg'>
     <div class='container'>
       <h1 class="text-center mt-2 mb-4">Career Page</h1>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-      <img class="img-fluid" id="banner" src='https://flaskproject--gauthamsu.repl.co/static/banner.jpg'>
-      <h2 class="text-center mt-2 mb-4">About Company</h2>
-      <p class='lead'>
-        Hello, This is the page where you get the information regarding the job openings
-      </p>
+      <div class='row' style='margin-bottom:16px;'>
+        <div class='col-md-6'>
+          <p class='lead'>
+            We are a Software company focusing on building python based applications and AI/ML solutions for day to day problems. We focus on Computer Vision, Natural Language Processing, Machine Learning, Deep Learning and other technological solutions. We are in need of a highly qualified computer science or data science professional who can help us in our growth alongside theirs'.
+          </p>
+        </div>
+        <div class='d-none d-md-block col-md-6'>
+          <img src="static/people.jpg" style="height:320px;border-radius:4px;">
+        </div>
+      </div>
       <h2 class="text-center mt-2 mb-4">Open Positions</h2>
       <div>
         {% for job in jobs %}
@@ -29,9 +37,9 @@
         {% endfor %}
       </div>
       <div class="text-center">
-        <button class="btn btn-primary btn-lg">Contact Us</button>
-        <p class='mt-4'>Copyright 2023 GSU</p>
+        <a href="mailto:gautham@company.ai?subject=Query%20regarding%20job%20openings&body=Hello%2C%0D%0A%0D%0AMy%20Name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20Question%3A%20%3Cyour%20question%20here%3E%0D%0A" class="btn btn-primary btn-lg">Contact Us</a>
       </div>  
     </div>
+    {% include 'footer.html' %}
   </body>
 </html>
