@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Application Submitted</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+      #banner {
+        height: 360px;
+        width: 100%;
+        object-fit:cover;
+        margin-bottom:16px;
+      }
+    </style>
+    
+  </head>
+  <body>
+    {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src='https://flaskproject--gauthamsu.repl.co/static/banner.jpg'>
+
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">
+        Career Page
+      </h1>
+
+      <b>Your Application for the role of "{{job['title']}}" has been submitted</b>
+      
+      <b>Full Name</b>
+      <div class="mb-2">{{application['full_name']}}</div>
+  
+      <b>Email</b>
+      <div class="mb-2">{{application['email']}}</div>
+  
+      <b>LinkedIn URL</b>
+      <div class="mb-2">{{application['linkedin']}}</div>
+  
+      <b>Education</b>
+      <div class="mb-2">{{application['education']}}</div>
+  
+      <b>Work Experience</b>
+      <div class="mb-2">{{application['experience']}}</div>
+  
+      <b>Resume URL</b>
+      <div class="mb-2">{{application['resume']}}</div>
+    </div>
+  {% include 'footer.html' %}
+  </body>
+</html>
